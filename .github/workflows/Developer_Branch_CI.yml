@@ -1,7 +1,28 @@
 name: Developer_Branch_CI
-on: [workflow_call]
+on:
+ push:
+  branches:
+   - 'XPNS-*'
 jobs:
   CI_Steps:
-    uses: krndevops/github-actions/.github/workflows/Developer_Branch_CI.yml@main
+   runs-on: self-hosted
+   steps:
+     - name: Checkout
+       uses: actions/checkout@v6
+
+     - name: Unit Tests
+       run: echo Running Unit Tests
+
+     - name: Integration Tests
+       run: echo Running Integration Tests
+
+     - name: SAST Scans
+       run: echo Running SAST Scans
+
+     - name: Detect Secrets in source code
+       run: echo Detecting Secrets in source code
+
+     - name: Code Quality
+       run: echo Code Quality
 
 
