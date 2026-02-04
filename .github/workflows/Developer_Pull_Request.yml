@@ -1,8 +1,5 @@
 name: Developer_Pull_Request
-on:
- pull_request:
-   branches:
-    - 'main'
+on: [workflow_call]
 jobs:
   CI_Steps:
     runs-on: self-hosted

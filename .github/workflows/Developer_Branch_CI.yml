@@ -1,8 +1,5 @@
 name: Developer_Branch_CI
-on:
- push:
-  branches:
-   - 'XPNS-*'
+on: [workflow_call]
 jobs:
   CI_Steps:
    runs-on: self-hosted

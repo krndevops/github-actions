@@ -1,8 +1,5 @@
 name: Release_Tags
-on:
- push:
-  tags:
-    - "v*"
+on: [workflow_call]
 jobs:
   CI_Steps:
     runs-on: self-hosted
