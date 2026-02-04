@@ -1,0 +1,5 @@
+name: Developer_Pull_Request
+on: [workflow_call]
+jobs:
+  CI_Steps:
+    uses: krndevops/github-actions/.github/workflows/Developer_Pull_Request.yml@main

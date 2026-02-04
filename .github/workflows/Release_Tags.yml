@@ -1,0 +1,6 @@
+name: Release_Tags
+on: [workflow_call]
+jobs:
+  CI_Steps:
+    uses: krndevops/github-actions/.github/workflows/Release_Tags.yml@main
+
