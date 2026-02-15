@@ -22,5 +22,8 @@ jobs:
      - name: Code Quality
        run: sonar-scanner -Dsonar.host.url=http://sonarqube-int.kdevops.online:9000 -Dsonar.login=${{ secrets.SONAR_USER }} -Dsonar.password=${{ secrets.SONAR_PASS }} -Dsonar.projectKey=expense-backend
 
-
+     - env:
+         SONAR_USER: ${{ secrets.SONAR_USER }}
+         SONAR_PASS: ${{ secrets.SONAR_PASS }}
+       run: echo Running Code Quality Analysis
 
