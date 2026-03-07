@@ -22,5 +22,6 @@ jobs:
         run: echo Detecting Secrets in source code
 
       - name: Produce Artifacts
-        run: echo Producing Artifacts
+        run: |
+          env
 
