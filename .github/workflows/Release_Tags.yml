@@ -27,7 +27,7 @@ jobs:
           ARTIFACTORY_CREDENTIALS: ${{ secrets.ARTIFACTORY_CREDENTIALS }}
         run: |
           npm install
-          zip -r ${service_name}-${GITHUB_REF_NAME}.zip * -x .github
-          curl -f -v -X PUT -u ${ARTIFACTORY_CREDENTIALS} -T ${service_name}-${GITHUB_REF_NAME}.zip http://artifactory-int.kdevops.online:8081/artifactory/${service_name}/${service_name}-${GITHUB_REF_NAME}.zip
+          zip -r ${GITHUB_REF_NAME}.zip * -x .github
+          curl -f -v -X PUT -u ${ARTIFACTORY_CREDENTIALS} -T ${GITHUB_REF_NAME}.zip http://artifactory-int.kdevops.online:8081/artifactory/${service_name}/${GITHUB_REF_NAME}.zip
         
         
